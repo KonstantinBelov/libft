@@ -6,7 +6,7 @@
 /*   By: kbelov <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 12:59:23 by kbelov            #+#    #+#             */
-/*   Updated: 2019/02/21 16:33:30 by kbelov           ###   ########.fr       */
+/*   Updated: 2019/03/01 01:39:32 by kbelov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char		*ft_strtrim(char const *s)
 	size_t			len;
 	size_t			start;
 
+	if (!s)
+		return (NULL);
 	start = 0;
 	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
 		start++;

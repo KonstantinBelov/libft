@@ -6,7 +6,7 @@
 /*   By: kbelov <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 15:42:55 by kbelov            #+#    #+#             */
-/*   Updated: 2019/02/21 15:59:56 by kbelov           ###   ########.fr       */
+/*   Updated: 2019/03/01 02:00:42 by kbelov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	new = ft_strnew(ft_strlen(s));
+	if (!(new = ft_strnew(ft_strlen(s))))
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

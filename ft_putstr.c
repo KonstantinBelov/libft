@@ -6,14 +6,17 @@
 /*   By: kbelov <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 09:52:51 by kbelov            #+#    #+#             */
-/*   Updated: 2019/02/19 10:09:32 by kbelov           ###   ########.fr       */
+/*   Updated: 2019/03/01 01:47:47 by kbelov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void		ft_putstr(char const *s)
 {
-	while (*s != '\0')
-		write(1, s++, 1);
+	if (s)
+	{
+		while (*s != '\0')
+			write(1, s++, 1);
+	}
 }
